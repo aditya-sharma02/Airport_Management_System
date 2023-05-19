@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header') %>
+</head>
+
+<body class="flight">
+
+    <%- include('./partials/navadmin') %>
+        <!-- navbarr ends -->
+
+        <div class="flight_details">
+            <div>
+                <h1 class="input-heading" style="color: aliceblue;"><span>AIR ROUTES</span></h1>
+            </div>
+            <span>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Route Number</th>
+                            <th>Altitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0;i<data.length;i++){ %>
+                            <tr>
+                                <td><%- data[i].Route_No %></td>
+                                <td><%- data[i].altitude %></td>
+                            </tr>
+                            <% }%>
+                    </tbody>
+                </table>
+            </span>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</htm!

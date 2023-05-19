@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header') %>
+</head>
+
+<body class="flight">
+
+    <%- include('./partials/navadmin') %>
+        <!-- navbarr ends -->
+
+        <div class="flight_details">
+            <div>
+                <h1 class="input-heading" style="color: aliceblue;"><span>FLIGHT DETAILS</span></h1>
+            </div>
+            <span>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Flight ID</th>
+                            <th>Flight Name</th>
+                            <th>Flight Type</th>
+                            <th>Source Airport</th>
+                            <th>Destination Airport</th>
+                            <th>Start time</th>
+                            <th>End time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0;i<data.length;i++){ %>
+                            <tr>
+                                <td><%- data[i].F_ID %></td>
+                                <td><%- data[i].FName %></td>
+                                <td><%- data[i].type %></td>
+                                <td><%- data[i].src_airport %></td>
+                                <td><%- data[i].dst_airport %></td>
+                                <td><%- data[i].start_time %></td>
+                                <td><%- data[i].end_time %></td>
+                            </tr>
+                            <% }%>
+                    </tbody>
+                </table>
+            </span>
+        </div>
+
+
+
+
+
+
+        <!-- <table border="1" width="100%">
+            <tr>
+                <th>Flight ID</th>
+                <th>Flight Name</th>
+                <th>Flight Type</th>
+                <th>source airport</th>
+                <th>destination airport</th>
+                <th>start time</th>
+                <th>end time</th>
+            </tr>
+            <% for(var i=0;i<data.length;i++){ %>
+                <tr>
+                    <td><%- data[i].F_ID %></td>
+                    <td><%- data[i].FName %></td>
+                    <td><%- data[i].type %></td>
+                    <td><%- data[i].src_airport %></td>
+                    <td><%- data[i].dst_airport %></td>
+                    <td><%- data[i].start_time %></td>
+                    <td><%- data[i].end_time %></td>
+                </tr>
+                <% }%>
+        </table> -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</htm!
