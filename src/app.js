@@ -3,7 +3,7 @@ const express = require("express")
 const app = express();
 const conn = require("./connection/conn")
 const path = require("path")
-
+const port = process.env.PORT
 
 const vpath = path.join(__dirname, "./views")
 const spath = path.join(__dirname, "../public")
@@ -171,6 +171,6 @@ app.get("/logout",(req,res)=>{
     res.redirect("/")
 })
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log("listening to the port 4000")
 })
